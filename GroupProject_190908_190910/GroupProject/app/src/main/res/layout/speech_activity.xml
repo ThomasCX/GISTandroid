@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".SpeakText"
+    tools:ignore="MissingDefaultResource"
+    android:id="@+id/drawerlayout1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/gradient_bg"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        <EditText
+            android:id="@+id/speechtext"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/blue"
+            android:hint="Enter Text"
+            android:layout_marginBottom="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Pitch"
+            android:textColor="@color/blue"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="17dp"/>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar_pitch"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:progress="50"
+            android:layout_marginBottom="17dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Speed"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:layout_marginBottom="17dp"/>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar_speed"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:progress="50"
+            android:layout_marginBottom="17dp"/>
+
+        <Button
+            android:id="@+id/speak_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Text To Speech"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/gradient_bg"
+            android:elevation="5dp"
+            android:enabled="false"/>
+
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"
+        />
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
